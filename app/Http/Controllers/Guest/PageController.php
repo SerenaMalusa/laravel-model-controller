@@ -16,9 +16,9 @@ class PageController extends Controller
         return view('pages.home', compact('movies'));
     }
 
-    public function show(int $id)
+    public function show(Movie $movie)
     {
-        $movie = Movie::find($id);
+        // $movie = Movie::find($id);
         return view('pages.show', compact('movie'));
     }
 }

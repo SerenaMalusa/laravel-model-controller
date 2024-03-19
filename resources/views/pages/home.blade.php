@@ -38,9 +38,7 @@
   
           <div class="card-body">
             <h5 class="card-title">
-              <a href="{{ route('show', [
-                'id' => $movie->id,
-              ]) }}">{{ $movie->title }}</a>
+              <a href="{{ route('show', $movie }}">{{ $movie->title }}</a>
             </h5>
             {{-- <ul class="list-group list-group-flush m-0 p-0">
               <li class="list-group-item">Original Language: {{ $movie->nationality }}</li>
