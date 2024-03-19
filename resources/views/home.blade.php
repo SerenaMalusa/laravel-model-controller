@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{{-- <!DOCTYPE html>
 <html lang="it">
   <head>
     <!-- carachters and viewport tags -->
@@ -19,6 +19,47 @@
   </head>
 <body>
   <h1>home</h1>
+  <button class="btn btn-primary">Ciao</button>
   @dd($movies)
 </body>
-</html>
+</html> --}}
+
+@extends('layouts.app')
+  
+@section('main_content')
+
+  <div class="container my-4">
+    
+    <h1>Movies</h1>
+    
+    <div class="row g-3 mt-2">
+    
+      @forelse($movies as $movie)
+        <div class="col-3">
+          <div class="card h-100">
+    
+            <div class="card-body">
+              <h5 class="card-title">{{ $movie->title }}</h5>
+              <ul class="list-group list-group-flush m-0 p-0">
+                <li class="list-group-item">Original Language: {{ $movie->nationality }}</li>
+                <li class="list-group-item">Original Title: {{ $movie->original_title }}</li>
+                <li class="list-group-item">Release Date: {{ $movie->date }}</li>
+              </ul>
+            
+            </div>
+          
+          </div>
+        </div>
+      @empty
+        <div class="col-12">
+          <h2>Sorry, no movies were found :(</h2>
+        </div>
+      @endforelse
+      
+    </div>
+
+  </div>
+
+  {{-- @dd($movies) --}}
+
+@endsection
