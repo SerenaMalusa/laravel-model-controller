@@ -38,7 +38,7 @@
   
           <div class="card-body">
             <h5 class="card-title">
-              <a href="{{ route('show', $movie }}">{{ $movie->title }}</a>
+              <a href="{{ route('show', $movie) }}">{{ $movie->title }}</a>
             </h5>
             {{-- <ul class="list-group list-group-flush m-0 p-0">
               <li class="list-group-item">Original Language: {{ $movie->nationality }}</li>
@@ -52,7 +52,7 @@
       </div>
     @empty
       <div class="col-12">
-        <h2>Sorry, no movies were found :(</h2>
+        <h2>Sorry, no movies were found</h2>
       </div>
     @endforelse
     
