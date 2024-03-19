@@ -10,7 +10,7 @@
     <meta name="description" content="laravel exercise">
   
     <!-- title and icon -->
-    <title>{{ env('APP_NAME')}} - @yield('title')</title>
+    <title>{{ env('APP_NAME') }}</title>
     <link rel="icon" href="{{ url('/logo-small.ico') }}">
   
     <!-- css -->
