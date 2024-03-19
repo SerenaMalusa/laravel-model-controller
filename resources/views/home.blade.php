@@ -19,5 +19,6 @@
   </head>
 <body>
   <h1>home</h1>
+  @dd($movies)
 </body>
 </html>
