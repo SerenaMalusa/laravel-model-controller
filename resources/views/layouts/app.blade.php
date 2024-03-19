@@ -20,8 +20,10 @@
         
     </head>
     <body>
-    
-        @yield('main_content')
+
+        <div class="container my-4">
+            @yield('main_content')
+        </div>    
 
     </body>
 </html>

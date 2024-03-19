@@ -13,6 +13,12 @@ class PageController extends Controller
         $movies = Movie::all();
         if (empty($movies)) abort(404);
 
-        return view('home', compact('movies'));
+        return view('pages.home', compact('movies'));
+    }
+
+    public function show(int $id)
+    {
+        $movie = Movie::find($id);
+        return view('pages.show', compact('movie'));
     }
 }
